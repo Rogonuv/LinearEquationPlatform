@@ -1,26 +1,16 @@
 # Linear Equation Platform
 
-This is a sample platform developed in C++ for practicing linear equations step by step.
+This is my first C++ prototype of a platform for solving linear equations step by step.
 
-The program generates a linear equation and asks the student to solve it through different steps instead of only entering the final answer.
+I developed this project while learning C++. The main idea is to evaluate the process used by the student to solve an equation instead of only checking the final answer.
 
-## Current Features
+## How It Works
 
-- Generates random linear equations.
-- Checks the solution step by step.
-- Gives feedback when an answer is correct or incorrect.
-- Allows the student to try again after an incorrect answer.
-- Counts the total number of attempts.
-- Measures the time used to complete the exercise.
-- Saves the attempts and completion time in a text file.
-
-## Example
-
-The program can generate an equation such as:
+The program generates a random linear equation such as:
 
 3x + 9 = 12
 
-The student solves it step by step:
+The student then solves the equation step by step:
 
 3x = 12 - 9
 
@@ -30,7 +20,49 @@ x = 3 / 3
 
 x = 1
 
-Each step must be completed correctly before continuing to the next step.
+The program checks each step before allowing the student to continue. If the answer is incorrect, the student receives feedback and can try again.
+
+## Features Implemented
+
+- Random generation of linear equations.
+- Step-by-step solution process.
+- Validation of each step.
+- Feedback for correct and incorrect answers.
+- Multiple attempts when an answer is incorrect.
+- Attempt counter.
+- Measurement of the total time used to complete the exercise.
+- Automatic saving of attempts and completion time in a text file.
+- The results file is opened in append mode, so new exercise results can be added without deleting previous results.
+
+## Concepts I Practiced
+
+While developing this prototype, I practiced and learned how to use:
+
+- Variables and data types.
+- Conditional statements (`if` / `else`).
+- `while` loops.
+- User input with `cin`.
+- Console output with `cout`.
+- Random number generation.
+- Time measurement using the `<chrono>` library.
+- File handling using the `<fstream>` library.
+- Append mode (`ios::app`) to keep a history of results.
+- Basic input validation logic.
+- Git for version control.
+- GitHub for storing and sharing the project.
+
+## Results File
+
+After the student completes the exercise, the program creates or updates a file called:
+
+`resultados.txt`
+
+The program saves information such as:
+
+- Number of attempts.
+- Total completion time.
+
+The file is generated locally when the program is executed. It is not included in the repository because it contains results produced during each execution of the program.
 
 ## Current Limitation
 
@@ -40,12 +72,16 @@ For example, if the program expects:
 
 3x = 12 - 9
 
-the input is read as different values and characters in a specific order. If the student enters a different structure or enters a character where the program expects a number, the input stream can fail and the program may not allow the student to continue normally.
+the input is read as different values and characters in a specific order.
 
-This input validation is a limitation of the current version and is something I plan to improve in a future version.
+If the student enters a different structure, or enters a character where the program expects a number, the input stream can fail and the program may not allow the student to continue normally.
 
-## About
+I identified this input validation as one of the main limitations of the current version and something I would like to improve in a future version.
 
-This is my first prototype and I developed it while learning C++. The purpose of this project is to explore a simple way of evaluating the process used to solve a linear equation, rather than only checking the final answer.
+## Project Status
 
-I plan to continue improving as I learn more C++.
+This is an initial prototype.
+
+My goal with this first version was to understand and build the basic logic myself while learning C++, including the step-by-step validation, attempts, timing, file output, and version control.
+
+I plan to continue improving the platform as I learn more C++ and receive feedback about the project.
