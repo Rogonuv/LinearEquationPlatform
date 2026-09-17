@@ -84,4 +84,4 @@ This is an initial prototype.
 
 My goal with this first version was to understand and build the basic logic myself while learning C++, including the step-by-step validation, attempts, timing, file output, and version control.
 
-I plan to continue improving the platform as I learn more C++ and receive feedback about the project.
+I plan to continue improvingas I learn more C++ and receive feedback about the project.
