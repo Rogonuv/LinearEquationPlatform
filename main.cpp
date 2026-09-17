@@ -6,6 +6,7 @@ using namespace std;
 
 int main() 
 {
+  srand(time(0));
   auto inicio = chrono::steady_clock::now();
   int intentos = 0;
   char variable = 'x';
